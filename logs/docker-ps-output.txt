@@ -1,5 +1,0 @@
-oot@i-08c8cd1dbf1b6fb3a:/# docker ps -a
-CONTAINER ID   IMAGE                                                      COMMAND                  CREATED         STATUS         PORTS     NAMES
-b2bdc7a2fe1c   awsdeepracercommunity/deepracer-sagemaker:5.0.0-cpu        "bash -m start.sh tr…"   5 minutes ago   Up 5 minutes             tmp3cwmt5x3_algo-1-ndy6l_1
-245017819be1   awsdeepracercommunity/deepracer-robomaker:5.0.8-cpu-avx2   "/bin/bash -c './run…"   5 minutes ago   Up 5 minutes             deepracer-0_robomaker.1.bfqvydeo1uvoo5hfr7fn2zazr
-27d033fdc245   awsdeepracercommunity/deepracer-rlcoach:5.0.6              "/bin/sh -c '(python…"   5 minutes ago   Up 5 minutes             deepracer-0_rl_coach.1.hz4q8qrt4nx31i7ujjxhxajqm
