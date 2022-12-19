@@ -1,0 +1,1559 @@
+root@i-08c8cd1dbf1b6fb3a:/# docker logs 27d033fdc245
+Parameter image_name will be renamed to image_uri in SageMaker Python SDK v2.
+Model checkpoints and other metadata will be stored at: s3://aws-deep-racer-for-cloud-local20221217074505155300000003/rl-deepracer-sagemaker
+Uploading to s3://aws-deep-racer-for-cloud-local20221217074505155300000003/rl-deepracer-sagemaker
+Using image awsdeepracercommunity/deepracer-sagemaker:5.0.0-cpu
+Configured following hyperparameters
+{'s3_bucket': 'aws-deep-racer-for-cloud-local20221217074505155300000003', 's3_prefix': 'rl-deepracer-sagemaker', 'aws_region': 'us-east-1', 'model_metadata_s3_key': 's3://aws-deep-racer-for-cloud-local20221217074505155300000003/custom_files/model_metadata.json', 'RLCOACH_PRESET': 'deepracer', 'batch_size': 64, 'beta_entropy': 0.01, 'discount_factor': 0.995, 'e_greedy_value': 0.05, 'epsilon_steps': 10000, 'exploration_type': 'categorical', 'loss_type': 'huber', 'lr': 0.0003, 'num_episodes_between_training': 20, 'num_epochs': 10, 'stack_size': 1, 'term_cond_avg_score': 350.0, 'term_cond_max_episodes': 1000, 'sac_alpha': 0.2}
+The Docker Engine you're using is running in swarm mode.
+Compose does not use swarm mode to deploy services to multiple nodes in a swarm. All containers will be scheduled on the current node.
+
+To deploy your application across the swarm, use `docker stack deploy`.
+
+Creating tmp3cwmt5x3_algo-1-ndy6l_1 ...
+Creating tmp3cwmt5x3_algo-1-ndy6l_1 ... done
+Attaching to tmp3cwmt5x3_algo-1-ndy6l_1
+algo-1-ndy6l_1  | 21:C 17 Dec 2022 07:56:51.058 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+algo-1-ndy6l_1  | 21:C 17 Dec 2022 07:56:51.058 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=21, just startedalgo-1-ndy6l_1  | 21:C 17 Dec 2022 07:56:51.058 # Configuration loaded
+algo-1-ndy6l_1  | 21:M 17 Dec 2022 07:56:51.059 * monotonic clock: POSIX clock_gettimealgo-1-ndy6l_1  |                 _._
+algo-1-ndy6l_1  |            _.-``__ ''-._algo-1-ndy6l_1  |       _.-``    `.  `_.  ''-._           Redis 6.2.6 (00000000/0) 64 bit
+algo-1-ndy6l_1  |   .-`` .-```.  ```\/    _.,_ ''-._
+algo-1-ndy6l_1  |  (    '      ,       .-`  | `,    )     Running in standalone mode
+algo-1-ndy6l_1  |  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+algo-1-ndy6l_1  |  |    `-._   `._    /     _.-'    |     PID: 21
+algo-1-ndy6l_1  |   `-._    `-._  `-./  _.-'    _.-'
+algo-1-ndy6l_1  |  |`-._`-._    `-.__.-'    _.-'_.-'|
+algo-1-ndy6l_1  |  |    `-._`-._        _.-'_.-'    |           https://redis.io
+algo-1-ndy6l_1  |   `-._    `-._`-.__.-'_.-'    _.-'
+algo-1-ndy6l_1  |  |`-._`-._    `-.__.-'    _.-'_.-'|
+algo-1-ndy6l_1  |  |    `-._`-._        _.-'_.-'    |
+algo-1-ndy6l_1  |   `-._    `-._`-.__.-'_.-'    _.-'
+algo-1-ndy6l_1  |       `-._    `-.__.-'    _.-'
+algo-1-ndy6l_1  |           `-._        _.-'
+algo-1-ndy6l_1  |               `-.__.-'
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 21:M 17 Dec 2022 07:56:51.059 # Server initialized
+algo-1-ndy6l_1  | 21:M 17 Dec 2022 07:56:51.059 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+algo-1-ndy6l_1  | 21:M 17 Dec 2022 07:56:51.060 * Ready to accept connections
+algo-1-ndy6l_1  | 2022-12-17 07:56:54,412 sagemaker-containers INFO     Imported framework sagemaker_tensorflow_container.training
+algo-1-ndy6l_1  | 2022-12-17 07:56:54,418 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)
+algo-1-ndy6l_1  | 2022-12-17 07:56:54,882 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)
+algo-1-ndy6l_1  | 2022-12-17 07:56:54,895 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)
+algo-1-ndy6l_1  | 2022-12-17 07:56:54,907 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)
+algo-1-ndy6l_1  | 2022-12-17 07:56:54,915 sagemaker-containers INFO     Invoking user script
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Training Env:
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | {
+algo-1-ndy6l_1  |     "additional_framework_parameters": {
+algo-1-ndy6l_1  |         "sagemaker_estimator": "RLEstimator"
+algo-1-ndy6l_1  |     },
+algo-1-ndy6l_1  |     "channel_input_dirs": {},
+algo-1-ndy6l_1  |     "current_host": "algo-1-ndy6l",
+algo-1-ndy6l_1  |     "framework_module": "sagemaker_tensorflow_container.training:main",
+algo-1-ndy6l_1  |     "hosts": [
+algo-1-ndy6l_1  |         "algo-1-ndy6l"
+algo-1-ndy6l_1  |     ],
+algo-1-ndy6l_1  |     "hyperparameters": {
+algo-1-ndy6l_1  |         "s3_bucket": "aws-deep-racer-for-cloud-local20221217074505155300000003",
+algo-1-ndy6l_1  |         "s3_prefix": "rl-deepracer-sagemaker",
+algo-1-ndy6l_1  |         "aws_region": "us-east-1",
+algo-1-ndy6l_1  |         "model_metadata_s3_key": "s3://aws-deep-racer-for-cloud-local20221217074505155300000003/custom_files/model_metadata.json",
+algo-1-ndy6l_1  |         "RLCOACH_PRESET": "deepracer",
+algo-1-ndy6l_1  |         "batch_size": 64,
+algo-1-ndy6l_1  |         "beta_entropy": 0.01,
+algo-1-ndy6l_1  |         "discount_factor": 0.995,
+algo-1-ndy6l_1  |         "e_greedy_value": 0.05,
+algo-1-ndy6l_1  |         "epsilon_steps": 10000,
+algo-1-ndy6l_1  |         "exploration_type": "categorical",
+algo-1-ndy6l_1  |         "loss_type": "huber",
+algo-1-ndy6l_1  |         "lr": 0.0003,
+algo-1-ndy6l_1  |         "num_episodes_between_training": 20,
+algo-1-ndy6l_1  |         "num_epochs": 10,
+algo-1-ndy6l_1  |         "stack_size": 1,
+algo-1-ndy6l_1  |         "term_cond_avg_score": 350.0,
+algo-1-ndy6l_1  |         "term_cond_max_episodes": 1000,
+algo-1-ndy6l_1  |         "sac_alpha": 0.2
+algo-1-ndy6l_1  |     },
+algo-1-ndy6l_1  |     "input_config_dir": "/opt/ml/input/config",
+algo-1-ndy6l_1  |     "input_data_config": {},
+algo-1-ndy6l_1  |     "input_dir": "/opt/ml/input",
+algo-1-ndy6l_1  |     "is_master": true,
+algo-1-ndy6l_1  |     "job_name": "rl-deepracer-sagemaker",
+algo-1-ndy6l_1  |     "log_level": 20,
+algo-1-ndy6l_1  |     "master_hostname": "algo-1-ndy6l",
+algo-1-ndy6l_1  |     "model_dir": "/opt/ml/model",
+algo-1-ndy6l_1  |     "module_dir": "s3://aws-deep-racer-for-cloud-local20221217074505155300000003/rl-deepracer-sagemaker/source/sourcedir.tar.gz",
+algo-1-ndy6l_1  |     "module_name": "training_worker",
+algo-1-ndy6l_1  |     "network_interface_name": "eth0",
+algo-1-ndy6l_1  |     "num_cpus": 8,
+algo-1-ndy6l_1  |     "num_gpus": 0,
+algo-1-ndy6l_1  |     "output_data_dir": "/opt/ml/output/data",
+algo-1-ndy6l_1  |     "output_dir": "/opt/ml/output",
+algo-1-ndy6l_1  |     "output_intermediate_dir": "/opt/ml/output/intermediate",
+algo-1-ndy6l_1  |     "resource_config": {
+algo-1-ndy6l_1  |         "current_host": "algo-1-ndy6l",
+algo-1-ndy6l_1  |         "hosts": [
+algo-1-ndy6l_1  |             "algo-1-ndy6l"
+algo-1-ndy6l_1  |         ]
+algo-1-ndy6l_1  |     },
+algo-1-ndy6l_1  |     "user_entry_point": "training_worker.py"
+algo-1-ndy6l_1  | }
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Environment variables:
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | SM_HOSTS=["algo-1-ndy6l"]
+algo-1-ndy6l_1  | SM_NETWORK_INTERFACE_NAME=eth0
+algo-1-ndy6l_1  | SM_HPS={"RLCOACH_PRESET":"deepracer","aws_region":"us-east-1","batch_size":64,"beta_entropy":0.01,"discount_factor":0.995,"e_greedy_value":0.05,"epsilon_steps":10000,"exploration_type":"categorical","loss_type":"huber","lr":0.0003,"model_metadata_s3_key":"s3://aws-deep-racer-for-cloud-local20221217074505155300000003/custom_files/model_metadata.json","num_episodes_between_training":20,"num_epochs":10,"s3_bucket":"aws-deep-racer-for-cloud-local20221217074505155300000003","s3_prefix":"rl-deepracer-sagemaker","sac_alpha":0.2,"stack_size":1,"term_cond_avg_score":350.0,"term_cond_max_episodes":1000}
+algo-1-ndy6l_1  | SM_USER_ENTRY_POINT=training_worker.py
+algo-1-ndy6l_1  | SM_FRAMEWORK_PARAMS={"sagemaker_estimator":"RLEstimator"}
+algo-1-ndy6l_1  | SM_RESOURCE_CONFIG={"current_host":"algo-1-ndy6l","hosts":["algo-1-ndy6l"]}
+algo-1-ndy6l_1  | SM_INPUT_DATA_CONFIG={}
+algo-1-ndy6l_1  | SM_OUTPUT_DATA_DIR=/opt/ml/output/data
+algo-1-ndy6l_1  | SM_CHANNELS=[]
+algo-1-ndy6l_1  | SM_CURRENT_HOST=algo-1-ndy6l
+algo-1-ndy6l_1  | SM_MODULE_NAME=training_worker
+algo-1-ndy6l_1  | SM_LOG_LEVEL=20
+algo-1-ndy6l_1  | SM_FRAMEWORK_MODULE=sagemaker_tensorflow_container.training:main
+algo-1-ndy6l_1  | SM_INPUT_DIR=/opt/ml/input
+algo-1-ndy6l_1  | SM_INPUT_CONFIG_DIR=/opt/ml/input/config
+algo-1-ndy6l_1  | SM_OUTPUT_DIR=/opt/ml/output
+algo-1-ndy6l_1  | SM_NUM_CPUS=8
+algo-1-ndy6l_1  | SM_NUM_GPUS=0
+algo-1-ndy6l_1  | SM_MODEL_DIR=/opt/ml/model
+algo-1-ndy6l_1  | SM_MODULE_DIR=s3://aws-deep-racer-for-cloud-local20221217074505155300000003/rl-deepracer-sagemaker/source/sourcedir.tar.gz
+algo-1-ndy6l_1  | SM_TRAINING_ENV={"additional_framework_parameters":{"sagemaker_estimator":"RLEstimator"},"channel_input_dirs":{},"current_host":"algo-1-ndy6l","framework_module":"sagemaker_tensorflow_container.training:main","hosts":["algo-1-ndy6l"],"hyperparameters":{"RLCOACH_PRESET":"deepracer","aws_region":"us-east-1","batch_size":64,"beta_entropy":0.01,"discount_factor":0.995,"e_greedy_value":0.05,"epsilon_steps":10000,"exploration_type":"categorical","loss_type":"huber","lr":0.0003,"model_metadata_s3_key":"s3://aws-deep-racer-for-cloud-local20221217074505155300000003/custom_files/model_metadata.json","num_episodes_between_training":20,"num_epochs":10,"s3_bucket":"aws-deep-racer-for-cloud-local20221217074505155300000003","s3_prefix":"rl-deepracer-sagemaker","sac_alpha":0.2,"stack_size":1,"term_cond_avg_score":350.0,"term_cond_max_episodes":1000},"input_config_dir":"/opt/ml/input/config","input_data_config":{},"input_dir":"/opt/ml/input","is_master":true,"job_name":"rl-deepracer-sagemaker","log_level":20,"master_hostname":"algo-1-ndy6l","model_dir":"/opt/ml/model","module_dir":"s3://aws-deep-racer-for-cloud-local20221217074505155300000003/rl-deepracer-sagemaker/source/sourcedir.tar.gz","module_name":"training_worker","network_interface_name":"eth0","num_cpus":8,"num_gpus":0,"output_data_dir":"/opt/ml/output/data","output_dir":"/opt/ml/output","output_intermediate_dir":"/opt/ml/output/intermediate","resource_config":{"current_host":"algo-1-ndy6l","hosts":["algo-1-ndy6l"]},"user_entry_point":"training_worker.py"}
+algo-1-ndy6l_1  | SM_USER_ARGS=["--RLCOACH_PRESET","deepracer","--aws_region","us-east-1","--batch_size","64","--beta_entropy","0.01","--discount_factor","0.995","--e_greedy_value","0.05","--epsilon_steps","10000","--exploration_type","categorical","--loss_type","huber","--lr","0.0003","--model_metadata_s3_key","s3://aws-deep-racer-for-cloud-local20221217074505155300000003/custom_files/model_metadata.json","--num_episodes_between_training","20","--num_epochs","10","--s3_bucket","aws-deep-racer-for-cloud-local20221217074505155300000003","--s3_prefix","rl-deepracer-sagemaker","--sac_alpha","0.2","--stack_size","1","--term_cond_avg_score","350.0","--term_cond_max_episodes","1000"]
+algo-1-ndy6l_1  | SM_OUTPUT_INTERMEDIATE_DIR=/opt/ml/output/intermediate
+algo-1-ndy6l_1  | SM_HP_S3_BUCKET=aws-deep-racer-for-cloud-local20221217074505155300000003
+algo-1-ndy6l_1  | SM_HP_S3_PREFIX=rl-deepracer-sagemaker
+algo-1-ndy6l_1  | SM_HP_AWS_REGION=us-east-1
+algo-1-ndy6l_1  | SM_HP_MODEL_METADATA_S3_KEY=s3://aws-deep-racer-for-cloud-local20221217074505155300000003/custom_files/model_metadata.json
+algo-1-ndy6l_1  | SM_HP_RLCOACH_PRESET=deepracer
+algo-1-ndy6l_1  | SM_HP_BATCH_SIZE=64
+algo-1-ndy6l_1  | SM_HP_BETA_ENTROPY=0.01
+algo-1-ndy6l_1  | SM_HP_DISCOUNT_FACTOR=0.995
+algo-1-ndy6l_1  | SM_HP_E_GREEDY_VALUE=0.05
+algo-1-ndy6l_1  | SM_HP_EPSILON_STEPS=10000
+algo-1-ndy6l_1  | SM_HP_EXPLORATION_TYPE=categorical
+algo-1-ndy6l_1  | SM_HP_LOSS_TYPE=huber
+algo-1-ndy6l_1  | SM_HP_LR=0.0003
+algo-1-ndy6l_1  | SM_HP_NUM_EPISODES_BETWEEN_TRAINING=20
+algo-1-ndy6l_1  | SM_HP_NUM_EPOCHS=10
+algo-1-ndy6l_1  | SM_HP_STACK_SIZE=1
+algo-1-ndy6l_1  | SM_HP_TERM_COND_AVG_SCORE=350.0
+algo-1-ndy6l_1  | SM_HP_TERM_COND_MAX_EPISODES=1000
+algo-1-ndy6l_1  | SM_HP_SAC_ALPHA=0.2
+algo-1-ndy6l_1  | PYTHONPATH=/usr/local/bin:/opt/amazon:/opt/ml/code:/usr/lib/python36.zip:/usr/lib/python3.6:/usr/lib/python3.6/lib-dynload:/usr/local/lib/python3.6/dist-packages:/usr/lib/python3/dist-packages
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Invoking script with the following command:
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | /usr/bin/python3 training_worker.py --RLCOACH_PRESET deepracer --aws_region us-east-1 --batch_size 64 --beta_entropy 0.01 --discount_factor 0.995 --e_greedy_value 0.05 --epsilon_steps 10000 --exploration_type categorical --loss_type huber --lr 0.0003 --model_metadata_s3_key s3://aws-deep-racer-for-cloud-local20221217074505155300000003/custom_files/model_metadata.json --num_episodes_between_training20 --num_epochs 10 --s3_bucket aws-deep-racer-for-cloud-local20221217074505155300000003 --s3_prefix rl-deepracer-sagemaker --sac_alpha 0.2 --stack_size 1 --term_cond_avg_score 350.0 --term_cond_max_episodes 1000
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | WARNING:tensorflow:From training_worker.py:47: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | WARNING:tensorflow:From training_worker.py:47: The name tf.logging.ERROR is deprecated. Please use tf.compat.v1.logging.ERROR instead.
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Training Worker Args: Namespace(aws_region='us-east-1', checkpoint_dir='./checkpoint_sagemaker', cuda_visible_devices=None, environment_s3_key=None, framework='tensorflow', model_metadata_s3_key='s3://aws-deep-racer-for-cloud-local20221217074505155300000003/custom_files/model_metadata.json', preset_s3_key=None, pretrained_checkpoint='best', pretrained_checkpoint_dir='./pretrained_checkpoint_sagemaker', pretrained_s3_bucket=None, pretrained_s3_prefix='sagemaker', s3_bucket='aws-deep-racer-for-cloud-local20221217074505155300000003', s3_endpoint_url=None, s3_prefix='rl-deepracer-sagemaker')
+algo-1-ndy6l_1  | S3 bucket: aws-deep-racer-for-cloud-local20221217074505155300000003
+algo-1-ndy6l_1  |  S3 prefix: rl-deepracer-sagemaker
+algo-1-ndy6l_1  |  S3 endpoint URL: None
+algo-1-ndy6l_1  | [s3] Successfully downloaded model metadata                  from s3 key custom_files/model_metadata.json to local ./custom_files/agent/model_metadata.json.
+algo-1-ndy6l_1  | Sensor list ['FRONT_FACING_CAMERA'], network DEEP_CONVOLUTIONAL_NETWORK_SHALLOW, simapp_version 4.0, training_algorithm clipped_ppo, action_space_type discrete lidar_config {'num_sectors': 8,'num_values_per_sector': 8, 'clipping_dist': 2.0}
+algo-1-ndy6l_1  | Action space from file: [{'steering_angle': -30, 'speed': 0.6}, {'steering_angle': -15, 'speed': 0.6}, {'steering_angle': 0, 'speed': 0.6}, {'steering_angle': 15, 'speed': 0.6}, {'steering_angle': 30, 'speed': 0.6}]
+algo-1-ndy6l_1  | Using the following hyper-parameters
+algo-1-ndy6l_1  | {
+algo-1-ndy6l_1  |   "batch_size": 64,
+algo-1-ndy6l_1  |   "beta_entropy": 0.01,
+algo-1-ndy6l_1  |   "discount_factor": 0.995,
+algo-1-ndy6l_1  |   "e_greedy_value": 0.05,
+algo-1-ndy6l_1  |   "epsilon_steps": 10000,
+algo-1-ndy6l_1  |   "exploration_type": "categorical",
+algo-1-ndy6l_1  |   "loss_type": "huber",
+algo-1-ndy6l_1  |   "lr": 0.0003,
+algo-1-ndy6l_1  |   "num_episodes_between_training": 20,
+algo-1-ndy6l_1  |   "num_epochs": 10,
+algo-1-ndy6l_1  |   "stack_size": 1,
+algo-1-ndy6l_1  |   "term_cond_avg_score": 350.0,
+algo-1-ndy6l_1  |   "term_cond_max_episodes": 1000
+algo-1-ndy6l_1  | }
+algo-1-ndy6l_1  | [s3] Successfully uploaded hyperparameters to                  s3 bucket aws-deep-racer-for-cloud-local20221217074505155300000003 with s3 key rl-deepracer-sagemaker/ip/hyperparameters.json.
+algo-1-ndy6l_1  | Hostname: algo-1-ndy6l
+algo-1-ndy6l_1  | [s3] Successfully uploaded ip address to                  s3 bucket aws-deep-racer-for-cloud-local20221217074505155300000003 with s3 key rl-deepracer-sagemaker/ip/ip.json.
+algo-1-ndy6l_1  | [s3] Successfully uploaded ip done to                  s3 bucket aws-deep-racer-for-cloud-local20221217074505155300000003 with s3 key rl-deepracer-sagemaker/ip/done.
+algo-1-ndy6l_1  | ## Creating graph - name: MultiAgentGraphManager
+algo-1-ndy6l_1  | ## Start physics before creating graph
+algo-1-ndy6l_1  | ## Create graph
+algo-1-ndy6l_1  | ## Creating agent - name: agent
+algo-1-ndy6l_1  | [RL] Created agent loggers
+algo-1-ndy6l_1  | [RL] Dynamic import of memory:  "DeepRacerMemoryParameters" {
+algo-1-ndy6l_1  |     "load_memory_from_file_path": null,
+algo-1-ndy6l_1  |     "max_size": [
+algo-1-ndy6l_1  |         "<MemoryGranularity.Transitions: 0>",
+algo-1-ndy6l_1  |         1000000
+algo-1-ndy6l_1  |     ],
+algo-1-ndy6l_1  |     "n_step": -1,
+algo-1-ndy6l_1  |     "shared_memory": false,
+algo-1-ndy6l_1  |     "train_to_eval_ratio": 1
+algo-1-ndy6l_1  | }
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | [RL] Dynamically imported of memory <markov.memories.deepracer_memory.DeepRacerMemory object at 0x7f287f789390>
+algo-1-ndy6l_1  | [RL] Setting devices
+algo-1-ndy6l_1  | [RL] Setting filters
+algo-1-ndy6l_1  | [RL] Setting filter devices: numpy
+algo-1-ndy6l_1  | [RL] Setting Phase
+algo-1-ndy6l_1  | [RL] After setting Phase
+algo-1-ndy6l_1  | [RL] Setting signals
+algo-1-ndy6l_1  | [RL] Agent init successful
+algo-1-ndy6l_1  | [RL] ActorCriticAgent init
+algo-1-ndy6l_1  | [RL] ActorCriticAgent  init successful
+algo-1-ndy6l_1  | ## Created agent: agent
+algo-1-ndy6l_1  | ## Stop physics after creating graph
+algo-1-ndy6l_1  | ## Creating session
+algo-1-ndy6l_1  | Creating regular session
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.467846: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | AssignAdd: CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/global_step/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/global_step (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/global_step/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/global_step/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/value (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam (AssignAdd) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/AssignAdd (AssignAdd) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/AssignAdd (AssignAdd) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.467979: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/Variable (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Variable/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Variable/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.468112: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_1 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.468275: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_2 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/beta1_power/initial_value (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/beta1_power (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/beta1_power/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/beta1_power/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/beta2_power/initial_value (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/beta2_power (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/beta2_power/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/beta2_power/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/mul (Mul) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/mul_1 (Mul) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/Assign_1 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.468423: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_3 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.468553: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_4 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.468695: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_5 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.468865: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_6 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.469037: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_7 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.469175: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_8 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/middleware_fc_embedder/Dense_0/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.469279: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/Variable (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/Variable/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/Variable/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.469368: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_9 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/gradients_from_head_0-0_rescalers/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.469491: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Initializer/Const (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/v_values_head_0/output/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/v_values_head_0/output/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_10 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/v_values_head_0/output/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.469591: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/v_values_head_0/output/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/v_values_head_0/output/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/v_values_head_0/output/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_0/v_values_head_0/output/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_11 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_0/v_values_head_0/output/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_0/v_values_head_0/output/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.469748: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_12 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.469943: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_13 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.470138: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_14 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.470313: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_15 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.470509: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_16 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.470678: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_17 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.470857: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_18 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.471015: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_19 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/middleware_fc_embedder/Dense_0/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.471101: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/Variable (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/Variable/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/Variable/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.471217: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_20 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/gradients_from_head_0-0_rescalers/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.471391: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Fill: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_21 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam_1/Initializer/zeros/shape_as_tensor (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam_1/Initializer/zeros/Const (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam_1/Initializer/zeros (Fill) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/ppo_head_0/policy_fc/kernel/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.471557: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | ApplyAdam: CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Assign_22 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Adam/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Adam (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Adam/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Adam/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Adam_1/Initializer/zeros (Const) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Adam_1 (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Adam_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/Adam_1/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/online/Adam/update_main_level/agent/main/online/network_1/ppo_head_0/policy_fc/bias/ApplyAdam (ApplyAdam) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.472499: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/Variable (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Variable/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Variable/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.472585: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_1 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.472691: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_0/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_2 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.472815: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_3 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.472898: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_2/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_4 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473004: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_5 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473110: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/FRONT_FACING_CAMERA/Conv2d_4/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_6 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473227: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_7 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473334: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/middleware_fc_embedder/Dense_0/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_8 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473406: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/Variable (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/Variable/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/Variable/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473474: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/gradients_from_head_0-0_rescalers (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/gradients_from_head_0-0_rescalers/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/gradients_from_head_0-0_rescalers/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_9 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473559: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/v_values_head_0/output/kernel/Initializer/Const (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/v_values_head_0/output/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/v_values_head_0/output/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/v_values_head_0/output/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_10 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473636: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/v_values_head_0/output/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/v_values_head_0/output/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/v_values_head_0/output/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_0/v_values_head_0/output/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_11 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473756: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_12 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473859: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_0/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_13 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.473962: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_14 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474066: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_2/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_15 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474175: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_16 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474282: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/FRONT_FACING_CAMERA/Conv2d_4/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_17 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474373: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_18 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474454: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/bias/Initializer/zeros (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/bias (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/bias/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/middleware_fc_embedder/Dense_0/bias/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_19 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474516: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/Variable (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/Variable/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/Variable/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474595: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/gradients_from_head_0-0_rescalers (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/gradients_from_head_0-0_rescalers/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/gradients_from_head_0-0_rescalers/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_20 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474682: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [
+algo-1-ndy6l_1  |   /job:localhost/replica:0/task:0/device:CPU:0].
+algo-1-ndy6l_1  | See below for details of this colocation group:
+algo-1-ndy6l_1  | Colocation Debug Info:
+algo-1-ndy6l_1  | Colocation group had the following types and supported devices:
+algo-1-ndy6l_1  | Root Member(assigned_device_name_index_=-1 requested_device_name_='/device:GPU:0' assigned_device_name_='' resource_device_name_='/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+algo-1-ndy6l_1  | Assign: CPU
+algo-1-ndy6l_1  | RandomUniform: CPU XLA_CPU
+algo-1-ndy6l_1  | Const: CPU XLA_CPU
+algo-1-ndy6l_1  | Mul: CPU XLA_CPU
+algo-1-ndy6l_1  | Sub: CPU XLA_CPU
+algo-1-ndy6l_1  | Add: CPU XLA_CPU
+algo-1-ndy6l_1  | Identity: CPU XLA_CPU
+algo-1-ndy6l_1  | VariableV2: CPU
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | Colocation members, user-requested devices, and framework assigned devices, if any:
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/shape (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/min (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/max (Const)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/RandomUniform (RandomUniform)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/sub (Sub)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform/mul (Mul)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/Initializer/random_uniform (Add)
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel (VariableV2) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/Assign (Assign) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/network_1/ppo_head_0/policy_fc/kernel/read (Identity) /device:GPU:0
+algo-1-ndy6l_1  |   main_level/agent/main/target/Assign_21 (Assign) /device:GPU:0
+algo-1-ndy6l_1  |
+algo-1-ndy6l_1  | 2022-12-17 07:57:05.474773: W tensorflow/core/common_runtime/colocation_graph.cc:983] Failed to place the graph without changing the devices of some resources. Some of the operations (that had to be colocated with resource generating operations) are not supported on the resources' devices. Current candidate devices are [

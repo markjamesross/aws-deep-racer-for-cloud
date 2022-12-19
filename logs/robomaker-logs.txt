@@ -1,0 +1,21 @@
+root@i-08c8cd1dbf1b6fb3a:/# docker logs 245017819be1
+17/12/2022 07:56:47 passing arg to libvncserver: -rfbport
+17/12/2022 07:56:47 passing arg to libvncserver: 5900
+17/12/2022 07:56:47 x11vnc version: 0.9.13 lastmod: 2011-08-10  pid: 61
+17/12/2022 07:56:47
+17/12/2022 07:56:47 wait_for_client: WAIT:0
+17/12/2022 07:56:47
+17/12/2022 07:56:47 initialize_screen: fb_depth/fb_bpp/fb_Bpl 24/32/2560
+17/12/2022 07:56:47
+17/12/2022 07:56:47 Listening for VNC connections on TCP port 5900PORT=5900
+17/12/2022 07:56:47 Listening for VNC connections on TCP6 port 5900
+17/12/2022 07:56:47 listen6: bind: Address already in use
+17/12/2022 07:56:47 Not listening on IPv6 interface.
+17/12/2022 07:56:47
+
+The VNC desktop is:      245017819be1:0
+JWM: warning: /etc/jwm/system.jwmrc[6]: invalid include: /etc/jwm/debian-menu
+IP: 10.0.0.6 172.18.0.4 10.0.1.12  (245017819be1)
+s3 failed, retry after 1.0937241499928234 seconds. Re-try count: 1/5: Could not connect to the endpoint URL: "https://aws-deep-racer-for-cloud-local20221217074505155300000003.s3.eu-west-1.amazonaws.com/rl-deepracer-sagemaker/training_params.yaml"
+s3 failed, retry after 4.233122276056315 seconds. Re-try count: 2/5: Could not connect to the endpoint URL: "https://aws-deep-racer-for-cloud-local20221217074505155300000003.s3.eu-west-1.amazonaws.com/rl-deepracer-sagemaker/training_params.yaml"
+s3 failed, retry after 9.88433040569895 seconds. Re-try count: 3/5: Could not connect to the endpoint URL: "https://aws-deep-racer-for-cloud-local20221217074505155300000003.s3.eu-west-1.amazonaws.com/rl-deepracer-sagemaker/training_params.yaml"
